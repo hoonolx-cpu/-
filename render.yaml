@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: milk-records
+    runtime: node
+    region: oregon
+    plan: free
+    rootDir: .
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: "10000"
